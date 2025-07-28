@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Dahr | Luxury Watches</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .hero {
+      background: url('Assets/images/hero image.png') no-repeat center center/cover;
+      color: #fff;
+      text-align: left;
+      padding: 150px 60px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .hero b {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 480px;
+      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+      color: #ddd;
+    }
+
+    .hero button {
+      padding: 14px 32px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      background: #f5f5f5;
+    }
+
+    .features div {
+      text-align: center;
+    }
+
+    .products-section {
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .tabs {
+      margin-bottom: 30px;
+    }
+
+    .tabs a {
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .product {
+      width: 220px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
+      color: #fff;
+      padding: 60px 80px;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    .highlight img {
+      max-width: 25%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    }
+
+    .highlight-text {
+      max-width: 50%;
+      line-height: 1.6;
+    }
+
+    .highlight-text .quote {
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight-text .author {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', serif;
+      margin-left: 4px;
+    }
+
+    .brands {
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .brands h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #222;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    .brand-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .brand-logos img {
+      max-height: 70px;
+      opacity: 0.7;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .brand-logos img:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    .testimonials {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .testimonial-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .testimonial {
+      width: 250px;
+      text-align: left;
+    }
+
+    .footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.subscribe {
+  max-width: 600px;
+}
+
+.subscribe h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subscribe p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  width: 260px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.subscribe-form input::placeholder {
+  color: #777;
+}
+
+.subscribe-form button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #f7d07a, #f6c13c);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #f6c13c, #f7d07a);
+}
+
+.footer-logo img {
+  max-height: 100px;
+  width: auto;
+}
+
+
+    .bottom-bar {
+      background-color: #111;
+      text-align: center;
+      padding: 10px;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div><strong>Ad Dahr</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <div>+92 3290808905</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <b>Allow Yourself To Be A Step Ahead</b>
+      <p>Choose a watch that expresses your uniqueness.</p>
+      <button>ORDER NOW</button>
+    </div>
+  </section>
+
+
+  <section class="features">
+    <div><strong>Extended Warranty</strong><br>Up to 1 year Coverage</div>
+    <div><strong>Shipping</strong><br>We offer shipping all over Pakistan</div>
+    <div><strong>Free 7 Days Returns</strong><br>Offer valid on all items</div>
+  </section>
+
+  <section class="products-section">
+    <div class="tabs">
+      <a href="#">Best Sellers</a>
+      <a href="#">New In</a>
+      <a href="#">Sale</a>
+    </div>
+    <div class="products">
+      <div class="product">
+        <img src="Assets/images/halei landing image.webp" alt="HALEI">
+        <h4>HALEI</h4>
+
+      </div>
+      <div class="product">
+        <img src="Assets/images/bestwin landing image.jpg" alt="BESTWIN">
+        <h4>BESTWIN</h4>
+
+      </div>
+      <div class="product">
+        <img src="Assets/images/hoursly landing image.avif" alt="HOURSLY">
+        <h4>HOURSLY</h4>
+
+      </div>
+      <div class="product">
+        <img src="Assets/images/timas landing image.webp" alt="TIMAS">
+        <h4>TIMAS</h4>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <img src="Assets/images/banner image.png" alt="Watches">
+    <div class="highlight-text">
+      <p class="quote">“Two blessings most people waste: <span class="icon">⌚</span> & Good Health.”</p>
+      <p class="author">— Prophet Muhammad <span class="arabic">ﷺ</span></p>
+    </div>
+  </section>
+
+
+  <section class="brands">
+    <h2>Brands We Love</h2>
+    <div class="brand-logos">
+      <img src="Assets/images/2.png" alt="Timas">
+      <img src="Assets/images/1.png" alt="Bestwin">
+      <img src="Assets/images/3.png" alt="Halei">
+      <img src="Assets/images/HOURSLY.png" alt="Hoursly">
+    </div>
+  </section>
+
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-items">
+      <div class="testimonial">
+        <img src="Assets/images/Edited/Set 2/AD - 020.png" alt="Mark" style="width: 100%;">
+        <p><strong>Ali Akbar</strong><br>I am in love with the watch I purchased. The design is fantastic and I feel
+          sophisticated every time I wear it.</p>
+      </div>
+      <div class="testimonial">
+        <img src="Assets/images/Edited/Set 2/AD - 028.png" alt="Milana" style="width: 100%;">
+        <p><strong>Zain Jaffar</strong><br>The watch I got matches my style and its functionality is the best. I receive
+          compliments daily.</p>
+      </div>
+      <div class="testimonial">
+        <img src="Assets/images/Edited/Set 2/AD - 029.png" alt="Maleko" style="width: 100%;">
+        <p><strong>Hamza Ahmad</strong><br>Great experience and amazing selection of watches. I will definitely buy again for
+          variety and quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="subscribe">
+      <h3>Be The First To Know</h3>
+      <p>Discover the latest styles and enjoy exclusive offers sent directly to your inbox.</p>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Enter your email">
+        <button>SUBSCRIBE</button>
+      </div>
+    </div>
+  
+    <div class="footer-logo">
+      <img src="Assets/images/Ad Dahr Logo Transparent.png" alt="Ad Dahr Logo">
+    </div>
+  </div>
+  
+
+  <div class="bottom-bar">
+    <p>&copy; 2025 Ad Dahr. All rights reserved.</p>
+  </div>
+</body>
+
+</html>
